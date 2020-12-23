@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:InnobePDA.Renderers" 
+             xmlns:vm="clr-namespace:InnobePDA.ViewModels" 
+             x:Class="InnobePDA.Views.InboundPage">
+
+    <ContentPage.BindingContext>
+        <vm:InboundViewModel x:Name="vm"/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="InvoiceNo" 
+                   Completed="InvoiceNo_Completed"
+                   Text="{Binding InvoiceNo}"
+                   ReturnType="Done"
+                   ReturnCommand="{Binding SearchInvoiceCommand}"/>
+
+            <renderers:SoftkeyboardDisabledEntry x:Name="InvoiceNo2" 
+                   Completed="InvoiceNo2_Completed"
+                   Placeholder="키보드 안보임"
+                   Text="{Binding InvoiceNo2}"
+                   TextChanged="InvoiceNo2_TextChanged"
+                   ReturnCommand="{Binding SearchInvoice2Command}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
