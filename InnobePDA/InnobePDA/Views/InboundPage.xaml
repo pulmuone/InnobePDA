@@ -21,7 +21,8 @@
                    Completed="InvoiceNo2_Completed"
                    Placeholder="키보드 안보임"
                    Text="{Binding InvoiceNo2}"
-                   ReturnCommand="{Binding SearchInvoice2Command}"/>
+                   ReturnCommand="{Binding SearchInvoice2Command}"
+                   ReturnCommandParameter="."/>
 
         </StackLayout>
     </ContentPage.Content>

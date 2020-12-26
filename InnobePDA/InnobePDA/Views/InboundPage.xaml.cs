@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InnobePDA.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace InnobePDA.Views
         public InboundPage()
         {
             InitializeComponent();
+            (BindingContext as InboundViewModel)._entry = this.InvoiceNo2;
         }
 
         private void InvoiceNo_Completed(object sender, EventArgs e)
